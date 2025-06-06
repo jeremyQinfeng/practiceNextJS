@@ -31,9 +31,8 @@ const Navbar = async() =>{
                                 </button>
                             </form>
                             
-                            // get the user id form github account
                             <Link href = {'/user/${session?.id}'}>
-                                <span>{session?.user?.id}</span>
+                                <span>{session?.user?.name}</span>
                             </Link>
                         </>   
                     ): (
