@@ -21,6 +21,10 @@ const Navbar = async() =>{
                                 <span>Create</span>
                             </Link>
 
+                            <Link href = {'/user/${session?.id}'}>
+                                <span>{session?.user?.name}</span>
+                            </Link>
+
                             <form action={async() => {
                                 "use server";
                                 
@@ -31,9 +35,6 @@ const Navbar = async() =>{
                                 </button>
                             </form>
                             
-                            <Link href = {'/user/${session?.id}'}>
-                                <span>{session?.user?.name}</span>
-                            </Link>
                         </>   
                     ): (
                         <form action={ async() => {
